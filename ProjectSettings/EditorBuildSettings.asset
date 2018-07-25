@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WallJumpTest1.unity
+    guid: 9c970e815ef936648913f1d0a2050135
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 8fb6e47804ea94c43843de91988de2e5
