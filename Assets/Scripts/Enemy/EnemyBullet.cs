@@ -20,9 +20,12 @@ public class EnemyBullet : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        //if it hits something besides the enemy or an explosion
         if (other.tag != "Enemy" && other.tag != "Explosion")
         {
+            //Spawn explosion prefab
             Instantiate(EnemyExplosion, transform.position, transform.rotation);
+            //DestroyBullet
             Destroy(gameObject);
         }
     }

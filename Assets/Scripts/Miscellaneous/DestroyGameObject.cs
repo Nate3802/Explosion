@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyGameObject : MonoBehaviour {
-
+    //This script is for animation purposes
     public bool destroy;
 
 	// Use this for initialization

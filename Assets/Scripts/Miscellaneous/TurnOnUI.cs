@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnOnUI : MonoBehaviour {
-
+    //This script is for animation purposes
     public bool TurnOn;
     public GameObject obj;
 

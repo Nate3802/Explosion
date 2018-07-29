@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour {
     {
         if(shoot == true)
         {
+            //Start function below after the function runs through
             StartCoroutine(SpawnBullet());
             shoot = false;
         }
@@ -29,9 +30,11 @@ public class Enemy : MonoBehaviour {
 
     IEnumerator SpawnBullet()
     {
+        //Wait for certain amount of seconds before function
         yield return new WaitForSeconds(interval);
+        //Find the player's position
         Vector3 PlayerPos = Player.transform.position;
-
+        //Find the direction the player is from this object
         Vector2 direction = (Vector2)((PlayerPos - transform.position));
         direction.Normalize();
 
