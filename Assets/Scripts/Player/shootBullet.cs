@@ -27,6 +27,8 @@ public class shootBullet : MonoBehaviour {
     public Animator ammoTextAnim;
     public bool ammoDeplete;
 
+    public bool Reg = true;
+
     // Use this for initialization
     void Start () {
         winTime = winTimer;
@@ -37,28 +39,42 @@ public class shootBullet : MonoBehaviour {
 	void Update () {
         //Set the ammo text equal to the ammo variable
         ammoText.text = ammo.ToString();
+
+
         //Set the parameter in the ammotext animation to the ammoDeplete variable to use when the ammo depletion animation needs to play
         ammoTextAnim.SetBool("AmmoDeplete", ammoDeplete);
-        //If you click the mouse button, ammo is greater than 0 and you are able to shoot...
-        if (Input.GetMouseButtonDown(0) && ammo >= 1 && unshootable == false)
+
+        //weapon selected
+        if (Reg == true)
         {
-            //Find mouse position relative to camera
-            Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //Find the direction of the mouse relative to the player
-            Vector2 direction = (Vector2)((worldMousePos - transform.position));
-            direction.Normalize();
 
-            // Creates the bullet locally
-            GameObject bullet = (GameObject)Instantiate(
-                                    bullet1,
-                                    transform.position + (Vector3)(direction * 0.5f),
-                                    Quaternion.identity);
+            
+            //If you click the mouse button, ammo is greater than 0 and you are able to shoot...
+            if (Input.GetMouseButtonDown(0) && ammo >= 1 && unshootable == false)
+            {
+                //Find mouse position relative to camera
+                Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            // Adds velocity to the bullet
-            bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletVelocity;
-            //Deplete ammo by 1
-            ammo = ammo - 1;
+
+                //Find the direction of the mouse relative to the player
+                Vector2 direction = (Vector2)((worldMousePos - transform.position));
+                direction.Normalize();
+
+                // Creates the bullet locally
+                GameObject bullet = (GameObject)Instantiate(
+                                        bullet1,
+                                        transform.position + (Vector3)(direction * 0.5f),
+                                        Quaternion.identity);
+
+                // Adds velocity to the bullet
+                bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletVelocity;
+
+
+                //Deplete ammo by 1
+                ammo = ammo - 1;
+            }
         }
+
 
         //If you are in the finish zone for winTime...
         if(winTime <= 0)
@@ -83,6 +99,8 @@ public class shootBullet : MonoBehaviour {
         {
             //Change color back to original color
             GetComponent<SpriteRenderer>().color = white;
+
+
             //Change color timer back to original value
             colorTime = colorTimer;
         }
