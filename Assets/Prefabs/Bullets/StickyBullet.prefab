@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Explosion: {fileID: 1958719221489698, guid: 256a8d47a1e33144aa0c55602f8b940e, type: 2}
   stuck: 0
+  rb: {fileID: 50933704669240058}
 --- !u!212 &212821393905738090
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3376,6 +3376,18 @@ Prefab:
       propertyPath: ammo
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 114538391098555858, guid: 8698a98c96f865849b06a62c081556d3,
+        type: 2}
+      propertyPath: RegBullet
+      value: 
+      objectReference: {fileID: 1150400985100218, guid: cae1b4fdd2fa84a48a6848f87b0abd3d,
+        type: 2}
+    - target: {fileID: 114538391098555858, guid: 8698a98c96f865849b06a62c081556d3,
+        type: 2}
+      propertyPath: StickyBullet
+      value: 
+      objectReference: {fileID: 1588970453667876, guid: e7052e300bce7d6489637e282c553616,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8698a98c96f865849b06a62c081556d3, type: 2}
   m_IsPrefabAsset: 0

@@ -9,6 +9,8 @@ public class shootBullet : MonoBehaviour {
     public float bulletVelocity;
     public GameObject bullet;
     public GameObject bullet1;
+    public GameObject StickyBullet;
+    public GameObject RegBullet;
     public int ammo;
     public Text ammoText;
     public string currentScene;
@@ -45,12 +47,20 @@ public class shootBullet : MonoBehaviour {
         ammoTextAnim.SetBool("AmmoDeplete", ammoDeplete);
 
         //weapon selected
-        if (Reg == true)
-        {
 
-            
-            //If you click the mouse button, ammo is greater than 0 and you are able to shoot...
-            if (Input.GetMouseButtonDown(0) && ammo >= 1 && unshootable == false)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            bullet1 = RegBullet;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            bullet1 = StickyBullet;
+        }
+
+
+        //If you click the mouse button, ammo is greater than 0 and you are able to shoot...
+        if (Input.GetMouseButtonDown(0) && ammo >= 1 && unshootable == false)
             {
                 //Find mouse position relative to camera
                 Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -73,7 +83,7 @@ public class shootBullet : MonoBehaviour {
                 //Deplete ammo by 1
                 ammo = ammo - 1;
             }
-        }
+        
 
 
         //If you are in the finish zone for winTime...

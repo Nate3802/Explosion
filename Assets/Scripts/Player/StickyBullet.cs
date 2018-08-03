@@ -5,6 +5,7 @@ using UnityEngine;
 public class StickyBullet : MonoBehaviour {
     public GameObject Explosion;
     public bool stuck = false;
+    public Rigidbody2D rb;
 
 
     // Use this for initialization
@@ -35,8 +36,8 @@ public class StickyBullet : MonoBehaviour {
         if (other.tag != "Player" && other.tag != "Explosion" && other.tag != "Ricochet")
         {
             //Stops bullet 
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-
+            rb.velocity = new Vector2(0, 0);
+            
             stuck = true;
 
 

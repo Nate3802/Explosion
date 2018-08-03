@@ -11,6 +11,7 @@ TagManager:
   - KillZone
   - EnemyBullet
   - EnemyExplosion
+  - StickyBullet
   layers:
   - Default
   - TransparentFX
