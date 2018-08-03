@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1016271800498742}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1016271800498742
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4424091374134056}
   - component: {fileID: 212612754926761300}
@@ -34,9 +34,9 @@ GameObject:
 --- !u!1 &1365440069074128
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4395176672929902}
   - component: {fileID: 20619105491403456}
@@ -52,7 +52,7 @@ GameObject:
 --- !u!4 &4395176672929902
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365440069074128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -65,11 +65,11 @@ Transform:
 --- !u!4 &4424091374134056
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016271800498742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.58, y: -3.092, z: 0}
+  m_LocalPosition: {x: -5.49, y: -2.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4395176672929902}
@@ -79,13 +79,17 @@ Transform:
 --- !u!20 &20619105491403456
 Camera:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365440069074128}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.7221021, g: 0.7443892, b: 0.7794118, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -96,7 +100,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -116,7 +120,7 @@ Camera:
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016271800498742}
   m_BodyType: 0
@@ -135,10 +139,10 @@ Rigidbody2D:
 --- !u!58 &58291517543578914
 CircleCollider2D:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016271800498742}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -150,7 +154,7 @@ CircleCollider2D:
 --- !u!61 &61753681760052892
 BoxCollider2D:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016271800498742}
   m_Enabled: 1
@@ -159,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0045204163, y: -0.302868}
+  m_Offset: {x: -0.008226395, y: 0.030662417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,19 +174,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34618187, y: 0.12920165}
+  m_Size: {x: 0.5759468, y: 0.85555625}
   m_EdgeRadius: 0
 --- !u!81 &81005686425684044
 AudioListener:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365440069074128}
   m_Enabled: 1
 --- !u!114 &114538391098555858
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016271800498742}
   m_Enabled: 1
@@ -193,7 +197,10 @@ MonoBehaviour:
   bulletVelocity: 10
   bullet: {fileID: 0}
   bullet1: {fileID: 1150400985100218, guid: cae1b4fdd2fa84a48a6848f87b0abd3d, type: 2}
-  ammo: 5
+  StickyBullet: {fileID: 1588970453667876, guid: e7052e300bce7d6489637e282c553616,
+    type: 2}
+  RegBullet: {fileID: 1150400985100218, guid: cae1b4fdd2fa84a48a6848f87b0abd3d, type: 2}
+  ammo: 999
   ammoText: {fileID: 0}
   currentScene: WallJumpTest1
   unshootable: 0
@@ -206,18 +213,19 @@ MonoBehaviour:
   colorTimer: 10
   colorTime: 0
   ammoTextAnim: {fileID: 0}
-  ammoDeplete: 0
+  ammoDeplete: 1
+  Reg: 1
 --- !u!124 &124955616944965502
 Behaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365440069074128}
   m_Enabled: 1
 --- !u!212 &212612754926761300
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016271800498742}
   m_Enabled: 1
@@ -259,3 +267,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
